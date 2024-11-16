@@ -10,6 +10,9 @@ class CustomRowInStackWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         CustomVerticalDividerWidget(),
+        SizedBox(
+          width: 85,
+        ),
         CustomVerticalDividerWidget(),
       ],
     );
