@@ -1,3 +1,4 @@
+import 'package:basket_ball/widgets/custom_column_in_stack_widget.dart';
 import 'package:basket_ball/widgets/custom_row_in_stack_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -9,6 +10,7 @@ class CustomStackWidget extends StatelessWidget {
     return const Stack(
       children: [
         CustomRowInStackWidget(),
+        CustomColumnInStackWidget(),
       ],
     );
   }

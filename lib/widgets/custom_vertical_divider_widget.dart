@@ -5,6 +5,9 @@ class CustomVerticalDividerWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const VerticalDivider();
+    return const VerticalDivider(
+      indent: 250,
+      endIndent: 250,
+    );
   }
 }
