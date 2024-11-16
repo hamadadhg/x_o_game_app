@@ -1,3 +1,4 @@
+import 'package:basket_ball/widgets/custom_vertical_divider_widget.dart';
 import 'package:flutter/material.dart';
 
 class CustomRowInStackWidget extends StatelessWidget {
@@ -6,7 +7,9 @@ class CustomRowInStackWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Row(
-      children: [],
+      children: [
+        CustomVerticalDividerWidget(),
+      ],
     );
   }
 }
