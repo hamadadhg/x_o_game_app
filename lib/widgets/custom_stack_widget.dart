@@ -1,3 +1,4 @@
+import 'package:basket_ball/widgets/custom_row_in_stack_widget.dart';
 import 'package:flutter/material.dart';
 
 class CustomStackWidget extends StatelessWidget {
@@ -5,6 +6,10 @@ class CustomStackWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Stack();
+    return const Stack(
+      children: [
+        CustomRowInStackWidget(),
+      ],
+    );
   }
 }
