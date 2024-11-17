@@ -8,7 +8,9 @@ class CustomRowResultWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Row(
       children: [
-        CustomColumnContainResultWidget(),
+        CustomColumnContainResultWidget(
+          text: 'Team X',
+        ),
       ],
     );
   }

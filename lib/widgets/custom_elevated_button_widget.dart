@@ -11,6 +11,9 @@ class CustomElevatedButtonWidget extends StatelessWidget {
     required this.color,
     this.fontSize = 35,
     this.fontWeight = FontWeight.normal,
+    this.widthElevatedButton = 250,
+    this.heightElevatedButton = 75,
+    this.borderRadius = 35,
   });
   final Color backgroundColor;
   final void Function()? onPressed;
@@ -18,13 +21,16 @@ class CustomElevatedButtonWidget extends StatelessWidget {
   final Color color;
   final double fontSize;
   final FontWeight fontWeight;
+  final double widthElevatedButton;
+  final double heightElevatedButton;
+  final double borderRadius;
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        fixedSize: const Size(
-          250,
-          75,
+        fixedSize: Size(
+          widthElevatedButton,
+          heightElevatedButton,
         ),
         backgroundColor: backgroundColor,
         shadowColor: kBlackColor.withOpacity(
@@ -32,7 +38,7 @@ class CustomElevatedButtonWidget extends StatelessWidget {
         ),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(
-            35,
+            borderRadius,
           ),
         ),
       ),
