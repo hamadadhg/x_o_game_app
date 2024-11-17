@@ -78,9 +78,7 @@ class _ResultViewState extends State<ResultView> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         centerTitle: true,
-        backgroundColor: const Color(
-          0xffFE9900,
-        ),
+        backgroundColor: kOrangeColor,
         title: CustomTextWidget(
           text: 'XO Game',
           fontSize: 35,
@@ -107,9 +105,7 @@ class _ResultViewState extends State<ResultView> {
             borderRadius: 0,
             widthElevatedButton: 200,
             heightElevatedButton: 50,
-            backgroundColor: const Color(
-              0xffFE9900,
-            ),
+            backgroundColor: kOrangeColor,
             onPressed: resetTheResultInTeamXAndO,
             text: 'Reset',
             color: kBlackColor,

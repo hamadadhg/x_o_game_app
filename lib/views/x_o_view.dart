@@ -1,7 +1,6 @@
 import 'package:basket_ball/constant.dart';
 import 'package:basket_ball/views/result_view.dart';
 import 'package:basket_ball/widgets/custom_elevated_button_widget.dart';
-
 import 'package:basket_ball/widgets/custom_x_o_game_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -11,9 +10,7 @@ class XOView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(
-        0xffF3E9D2,
-      ),
+      backgroundColor: kDrunkenColor,
       body: Column(
         children: [
           const SizedBox(
@@ -30,9 +27,7 @@ class XOView extends StatelessWidget {
               );
             },
             text: 'Result',
-            color: const Color(
-              0xffF3E9D2,
-            ),
+            color: kDrunkenColor,
             fontSize: 45,
             fontWeight: FontWeight.bold,
           ),

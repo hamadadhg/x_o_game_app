@@ -11,3 +11,11 @@ Color kDeepRedColor = const Color(
 Color kDeepBlueColor = const Color(
   0xff007ACC,
 );
+
+Color kOrangeColor = const Color(
+  0xffFE9900,
+);
+
+Color kDrunkenColor = const Color(
+  0xffF3E9D2,
+);

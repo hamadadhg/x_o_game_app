@@ -19,9 +19,7 @@ class _CustomXOGameWidgetState extends State<CustomXOGameWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(
-        0xffF3E9D2,
-      ),
+      backgroundColor: kDrunkenColor,
       body: Padding(
         padding: const EdgeInsets.symmetric(
           horizontal: 10,

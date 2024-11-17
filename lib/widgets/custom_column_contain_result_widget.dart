@@ -39,9 +39,7 @@ class CustomColumnContainResultWidget extends StatelessWidget {
           borderRadius: 0,
           widthElevatedButton: 150,
           heightElevatedButton: 48,
-          backgroundColor: const Color(
-            0xffFE9900,
-          ),
+          backgroundColor: kOrangeColor,
           onPressed: addOnePoint,
           text: 'Add 1 Point',
           color: kBlackColor,
@@ -55,9 +53,7 @@ class CustomColumnContainResultWidget extends StatelessWidget {
           borderRadius: 0,
           widthElevatedButton: 150,
           heightElevatedButton: 48,
-          backgroundColor: const Color(
-            0xffFE9900,
-          ),
+          backgroundColor: kOrangeColor,
           onPressed: addTwoPoint,
           text: 'Add 2 Point',
           color: kBlackColor,
@@ -71,9 +67,7 @@ class CustomColumnContainResultWidget extends StatelessWidget {
           borderRadius: 0,
           widthElevatedButton: 150,
           heightElevatedButton: 48,
-          backgroundColor: const Color(
-            0xffFE9900,
-          ),
+          backgroundColor: kOrangeColor,
           onPressed: addThreePoint,
           text: 'Add 3 Point',
           color: kBlackColor,
