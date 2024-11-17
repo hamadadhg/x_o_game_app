@@ -1,3 +1,5 @@
+import 'package:basket_ball/widgets/custom_text_button_widget.dart';
+import 'package:basket_ball/widgets/custom_text_widget.dart';
 import 'package:flutter/material.dart';
 
 class CustomXOGameWidget extends StatefulWidget {
@@ -60,19 +62,17 @@ class _CustomXOGameWidgetState extends State<CustomXOGameWidget> {
                       ],
                     ),
                     child: Center(
-                      child: Text(
-                        listOfXOrOValues[index] ?? '',
-                        style: TextStyle(
-                          color: listOfXOrOValues[index] == 'X'
-                              ? const Color(
-                                  0xffD72638,
-                                )
-                              : const Color(
-                                  0xff007ACC,
-                                ),
-                          fontSize: 50,
-                          fontWeight: FontWeight.bold,
-                        ),
+                      child: CustomTextWidget(
+                        text: listOfXOrOValues[index] ?? '',
+                        fontSize: 50,
+                        color: listOfXOrOValues[index] == 'X'
+                            ? const Color(
+                                0xffD72638,
+                              )
+                            : const Color(
+                                0xff007ACC,
+                              ),
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
@@ -94,8 +94,10 @@ class _CustomXOGameWidgetState extends State<CustomXOGameWidget> {
       builder: (context) {
         return AlertDialog(
           title: const Center(
-            child: Text(
-              'Select X Or O',
+            child: CustomTextWidget(
+              text: 'Select X Or O',
+              fontSize: 27,
+              color: Colors.grey,
             ),
           ),
           content: Padding(
@@ -105,11 +107,9 @@ class _CustomXOGameWidgetState extends State<CustomXOGameWidget> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                TextButton(
-                  style: TextButton.styleFrom(
-                    backgroundColor: const Color(
-                      0xffFFE9E9,
-                    ),
+                CustomTextButtonWidget(
+                  backgroundColor: const Color(
+                    0xffFFE9E9,
                   ),
                   onPressed: () {
                     setState(
@@ -121,21 +121,18 @@ class _CustomXOGameWidgetState extends State<CustomXOGameWidget> {
                       context,
                     );
                   },
-                  child: const Text(
-                    'X',
-                    style: TextStyle(
-                      color: Color(
-                        0xffD72638,
-                      ),
-                      fontSize: 30,
-                    ),
+                  text: 'X',
+                  fontSize: 30,
+                  color: const Color(
+                    0xffD72638,
                   ),
                 ),
-                TextButton(
-                  style: TextButton.styleFrom(
-                    backgroundColor: const Color(
-                      0xffE6F4FA,
-                    ),
+                const SizedBox(
+                  width: 10,
+                ),
+                CustomTextButtonWidget(
+                  backgroundColor: const Color(
+                    0xffE6F4FA,
                   ),
                   onPressed: () {
                     setState(
@@ -147,14 +144,10 @@ class _CustomXOGameWidgetState extends State<CustomXOGameWidget> {
                       context,
                     );
                   },
-                  child: const Text(
-                    'O',
-                    style: TextStyle(
-                      color: Color(
-                        0xff007ACC,
-                      ),
-                      fontSize: 30,
-                    ),
+                  text: 'O',
+                  fontSize: 30,
+                  color: const Color(
+                    0xff007ACC,
                   ),
                 ),
               ],
