@@ -1,7 +1,7 @@
 import 'package:basket_ball/constant.dart';
 import 'package:basket_ball/views/x_o_view.dart';
 import 'package:basket_ball/widgets/custom_elevated_button_widget.dart';
-import 'package:basket_ball/widgets/custom_text_widget.dart';
+
 import 'package:flutter/material.dart';
 
 class CustomStartGameWidget extends StatelessWidget {

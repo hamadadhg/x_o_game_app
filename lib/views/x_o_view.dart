@@ -1,4 +1,5 @@
 import 'package:basket_ball/constant.dart';
+import 'package:basket_ball/views/result_view.dart';
 import 'package:basket_ball/widgets/custom_elevated_button_widget.dart';
 
 import 'package:basket_ball/widgets/custom_x_o_game_widget.dart';
@@ -23,7 +24,11 @@ class XOView extends StatelessWidget {
           ),
           CustomElevatedButtonWidget(
             backgroundColor: kWhiteColor,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).pushNamed(
+                ResultView.resultViewId,
+              );
+            },
             text: 'Result',
             color: const Color(
               0xffF3E9D2,

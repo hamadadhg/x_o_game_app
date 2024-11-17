@@ -35,6 +35,7 @@ class BasketBall extends StatelessWidget {
 }
 */
 import 'package:basket_ball/views/home_view.dart';
+import 'package:basket_ball/views/result_view.dart';
 import 'package:basket_ball/views/x_o_view.dart';
 import 'package:flutter/material.dart';
 
@@ -52,6 +53,7 @@ class XOApp extends StatelessWidget {
       routes: {
         HomeView.homeViewId: (context) => const HomeView(),
         XOView.xoViewId: (context) => const XOView(),
+        ResultView.resultViewId: (context) => const ResultView(),
       },
       initialRoute: HomeView.homeViewId,
     );
