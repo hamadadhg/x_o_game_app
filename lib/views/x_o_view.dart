@@ -8,9 +8,7 @@ class XOView extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       backgroundColor: Colors.black,
-      body: Center(
-        child: CustomXOGameWidget(),
-      ),
+      body: CustomXOGameWidget(),
     );
   }
 }

@@ -6,34 +6,52 @@ class CustomElevatedButtonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        fixedSize: const Size(
-          250,
-          75,
-        ),
-        backgroundColor: const Color(
-          0xffffffff,
-        ),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(
-            35,
-          ),
-        ),
-      ),
-      onPressed: () {
-        Navigator.of(context).pushNamed(
-          XOView.xoViewId,
-        );
-      },
-      child: const Center(
-        child: Text(
-          'Start Game',
-          style: TextStyle(
-            color: Color(
+    return Container(
+      decoration: BoxDecoration(
+        gradient: const LinearGradient(
+          colors: [
+            Color(
               0xff1db954,
             ),
-            fontSize: 35,
+            Color(
+              0xff12823B,
+            ),
+          ],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+        borderRadius: BorderRadius.circular(
+          35,
+        ),
+      ),
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          fixedSize: const Size(
+            250,
+            75,
+          ),
+          backgroundColor: Colors.transparent,
+          shadowColor: Colors.black.withOpacity(
+            0.25,
+          ),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(
+              35,
+            ),
+          ),
+        ),
+        onPressed: () {
+          Navigator.of(context).pushNamed(
+            XOView.xoViewId,
+          );
+        },
+        child: const Center(
+          child: Text(
+            'Start Game',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 35,
+            ),
           ),
         ),
       ),
