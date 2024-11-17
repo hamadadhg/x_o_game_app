@@ -1,5 +1,5 @@
 import 'package:basket_ball/constant.dart';
-import 'package:basket_ball/widgets/custom_elevated_button_widget.dart';
+import 'package:basket_ball/widgets/custom_start_game_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomeView extends StatelessWidget {
@@ -10,7 +10,7 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       backgroundColor: kBlackColor,
       body: const Center(
-        child: CustomElevatedButtonWidget(),
+        child: CustomStartGameWidget(),
       ),
     );
   }

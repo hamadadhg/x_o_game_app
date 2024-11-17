@@ -1,58 +1,48 @@
 import 'package:basket_ball/constant.dart';
-import 'package:basket_ball/views/x_o_view.dart';
 import 'package:basket_ball/widgets/custom_text_widget.dart';
 import 'package:flutter/material.dart';
 
 class CustomElevatedButtonWidget extends StatelessWidget {
-  const CustomElevatedButtonWidget({super.key});
-
+  const CustomElevatedButtonWidget({
+    super.key,
+    required this.backgroundColor,
+    required this.onPressed,
+    required this.text,
+    required this.color,
+    this.fontSize = 35,
+    this.fontWeight = FontWeight.normal,
+  });
+  final Color backgroundColor;
+  final void Function()? onPressed;
+  final String text;
+  final Color color;
+  final double fontSize;
+  final FontWeight fontWeight;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        gradient: const LinearGradient(
-          colors: [
-            Color(
-              0xff1db954,
-            ),
-            Color(
-              0xff12823B,
-            ),
-          ],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        fixedSize: const Size(
+          250,
+          75,
         ),
-        borderRadius: BorderRadius.circular(
-          35,
+        backgroundColor: backgroundColor,
+        shadowColor: kBlackColor.withOpacity(
+          0.25,
+        ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(
+            35,
+          ),
         ),
       ),
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(
-          fixedSize: const Size(
-            250,
-            75,
-          ),
-          backgroundColor: Colors.transparent,
-          shadowColor: kBlackColor.withOpacity(
-            0.25,
-          ),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(
-              35,
-            ),
-          ),
-        ),
-        onPressed: () {
-          Navigator.of(context).pushNamed(
-            XOView.xoViewId,
-          );
-        },
-        child: Center(
-          child: CustomTextWidget(
-            text: 'Start Game',
-            fontSize: 35,
-            color: kWhiteColor,
-          ),
+      onPressed: onPressed,
+      child: Center(
+        child: CustomTextWidget(
+          text: text,
+          fontSize: fontSize,
+          color: color,
+          fontWeight: fontWeight,
         ),
       ),
     );
