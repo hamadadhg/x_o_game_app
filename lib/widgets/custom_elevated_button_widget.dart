@@ -1,3 +1,4 @@
+import 'package:basket_ball/constant.dart';
 import 'package:basket_ball/views/x_o_view.dart';
 import 'package:basket_ball/widgets/custom_text_widget.dart';
 import 'package:flutter/material.dart';
@@ -32,7 +33,7 @@ class CustomElevatedButtonWidget extends StatelessWidget {
             75,
           ),
           backgroundColor: Colors.transparent,
-          shadowColor: Colors.black.withOpacity(
+          shadowColor: kBlackColor.withOpacity(
             0.25,
           ),
           shape: RoundedRectangleBorder(
@@ -46,11 +47,11 @@ class CustomElevatedButtonWidget extends StatelessWidget {
             XOView.xoViewId,
           );
         },
-        child: const Center(
+        child: Center(
           child: CustomTextWidget(
             text: 'Start Game',
             fontSize: 35,
-            color: Colors.white,
+            color: kWhiteColor,
           ),
         ),
       ),

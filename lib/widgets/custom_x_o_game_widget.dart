@@ -1,3 +1,4 @@
+import 'package:basket_ball/constant.dart';
 import 'package:basket_ball/widgets/custom_text_button_widget.dart';
 import 'package:basket_ball/widgets/custom_text_widget.dart';
 import 'package:flutter/material.dart';
@@ -47,10 +48,10 @@ class _CustomXOGameWidgetState extends State<CustomXOGameWidget> {
                       borderRadius: BorderRadius.circular(
                         8,
                       ),
-                      color: Colors.white,
+                      color: kWhiteColor,
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.black.withOpacity(
+                          color: kBlackColor.withOpacity(
                             0.1,
                           ),
                           blurRadius: 4,
@@ -66,12 +67,8 @@ class _CustomXOGameWidgetState extends State<CustomXOGameWidget> {
                         text: listOfXOrOValues[index] ?? '',
                         fontSize: 50,
                         color: listOfXOrOValues[index] == 'X'
-                            ? const Color(
-                                0xffD72638,
-                              )
-                            : const Color(
-                                0xff007ACC,
-                              ),
+                            ? kDeepRedColor
+                            : kDeepBlueColor,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -123,9 +120,7 @@ class _CustomXOGameWidgetState extends State<CustomXOGameWidget> {
                   },
                   text: 'X',
                   fontSize: 30,
-                  color: const Color(
-                    0xffD72638,
-                  ),
+                  color: kDeepRedColor,
                 ),
                 const SizedBox(
                   width: 10,
@@ -146,9 +141,7 @@ class _CustomXOGameWidgetState extends State<CustomXOGameWidget> {
                   },
                   text: 'O',
                   fontSize: 30,
-                  color: const Color(
-                    0xff007ACC,
-                  ),
+                  color: kDeepBlueColor,
                 ),
               ],
             ),
