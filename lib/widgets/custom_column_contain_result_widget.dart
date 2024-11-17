@@ -3,44 +3,20 @@ import 'package:basket_ball/widgets/custom_elevated_button_widget.dart';
 import 'package:basket_ball/widgets/custom_text_widget.dart';
 import 'package:flutter/material.dart';
 
-class CustomColumnContainResultWidget extends StatefulWidget {
+class CustomColumnContainResultWidget extends StatelessWidget {
   const CustomColumnContainResultWidget({
     super.key,
     required this.text,
+    required this.score,
+    required this.addOnePoint,
+    required this.addTwoPoint,
+    required this.addThreePoint,
   });
   final String text;
-
-  @override
-  State<CustomColumnContainResultWidget> createState() =>
-      _CustomColumnContainResultWidgetState();
-}
-
-class _CustomColumnContainResultWidgetState
-    extends State<CustomColumnContainResultWidget> {
-  int score = 0;
-  void addOnePoint() {
-    setState(
-      () {
-        score++;
-      },
-    );
-  }
-
-  void addTwoPoint() {
-    setState(
-      () {
-        score = score + 2;
-      },
-    );
-  }
-
-  void addThreePoint() {
-    setState(
-      () {
-        score = score + 3;
-      },
-    );
-  }
+  final int score;
+  final VoidCallback addOnePoint;
+  final VoidCallback addTwoPoint;
+  final VoidCallback addThreePoint;
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +26,7 @@ class _CustomColumnContainResultWidgetState
           height: 25,
         ),
         CustomTextWidget(
-          text: widget.text,
+          text: text,
           fontSize: 38,
           color: kBlackColor,
         ),
