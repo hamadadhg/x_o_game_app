@@ -16,7 +16,7 @@ class _CustomXOGameWidgetState extends State<CustomXOGameWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(
+      backgroundColor: const Color(
         0xffF3E9D2,
       ),
       body: Padding(
@@ -45,16 +45,14 @@ class _CustomXOGameWidgetState extends State<CustomXOGameWidget> {
                       borderRadius: BorderRadius.circular(
                         8,
                       ),
-                      color: Color(
-                        0xffFFFFFF,
-                      ),
+                      color: Colors.white,
                       boxShadow: [
                         BoxShadow(
                           color: Colors.black.withOpacity(
                             0.1,
                           ),
                           blurRadius: 4,
-                          offset: Offset(
+                          offset: const Offset(
                             2,
                             2,
                           ),
@@ -66,10 +64,10 @@ class _CustomXOGameWidgetState extends State<CustomXOGameWidget> {
                         listOfXOrOValues[index] ?? '',
                         style: TextStyle(
                           color: listOfXOrOValues[index] == 'X'
-                              ? Color(
+                              ? const Color(
                                   0xffD72638,
                                 )
-                              : Color(
+                              : const Color(
                                   0xff007ACC,
                                 ),
                           fontSize: 50,
@@ -101,7 +99,7 @@ class _CustomXOGameWidgetState extends State<CustomXOGameWidget> {
             ),
           ),
           content: Padding(
-            padding: EdgeInsets.only(
+            padding: const EdgeInsets.only(
               top: 15,
             ),
             child: Row(
@@ -109,7 +107,7 @@ class _CustomXOGameWidgetState extends State<CustomXOGameWidget> {
               children: [
                 TextButton(
                   style: TextButton.styleFrom(
-                    backgroundColor: Color(
+                    backgroundColor: const Color(
                       0xffFFE9E9,
                     ),
                   ),
@@ -135,7 +133,7 @@ class _CustomXOGameWidgetState extends State<CustomXOGameWidget> {
                 ),
                 TextButton(
                   style: TextButton.styleFrom(
-                    backgroundColor: Color(
+                    backgroundColor: const Color(
                       0xffE6F4FA,
                     ),
                   ),
