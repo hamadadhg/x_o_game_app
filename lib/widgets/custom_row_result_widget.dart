@@ -1,3 +1,4 @@
+/*
 import 'package:basket_ball/widgets/custom_column_contain_result_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -34,6 +35,7 @@ class CustomRowResultWidget extends StatelessWidget {
             addOnePoint: addOnePointToTeamX,
             addTwoPoint: addTwoPointToTeamX,
             addThreePoint: addThreePointToTeamX,
+            color: Colors.lightGreenAccent,
           ),
           const SizedBox(
             width: 20,
@@ -51,9 +53,11 @@ class CustomRowResultWidget extends StatelessWidget {
             addOnePoint: addOnePointToTeamO,
             addTwoPoint: addTwoPointToTeamO,
             addThreePoint: addThreePointToTeamO,
+            color: Colors.lightBlueAccent,
           ),
         ],
       ),
     );
   }
 }
+*/

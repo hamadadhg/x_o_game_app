@@ -1,3 +1,4 @@
+/*
 import 'package:basket_ball/constant.dart';
 import 'package:basket_ball/widgets/custom_elevated_button_widget.dart';
 import 'package:basket_ball/widgets/custom_text_widget.dart';
@@ -11,12 +12,14 @@ class CustomColumnContainResultWidget extends StatelessWidget {
     required this.addOnePoint,
     required this.addTwoPoint,
     required this.addThreePoint,
+    required this.color,
   });
   final String text;
   final int score;
   final VoidCallback addOnePoint;
   final VoidCallback addTwoPoint;
   final VoidCallback addThreePoint;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +31,8 @@ class CustomColumnContainResultWidget extends StatelessWidget {
         CustomTextWidget(
           text: text,
           fontSize: 38,
-          color: kBlackColor,
+          color: color,
+          fontFamily: 'Dancing Script',
         ),
         CustomTextWidget(
           text: score.toString(),
@@ -78,3 +82,4 @@ class CustomColumnContainResultWidget extends StatelessWidget {
     );
   }
 }
+*/

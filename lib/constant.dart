@@ -1,3 +1,4 @@
+/*
 import 'package:flutter/material.dart';
 
 Color kBlackColor = Colors.black;
@@ -19,3 +20,4 @@ Color kOrangeColor = const Color(
 Color kDrunkenColor = const Color(
   0xffF3E9D2,
 );
+*/
