@@ -1,4 +1,6 @@
 import 'package:basket_ball/constant.dart';
+import 'package:basket_ball/widgets/custom_column_contain_result_widget.dart';
+import 'package:basket_ball/widgets/custom_elevated_button_widget.dart';
 import 'package:basket_ball/widgets/custom_row_result_widget.dart';
 import 'package:basket_ball/widgets/custom_text_widget.dart';
 import 'package:flutter/material.dart';
@@ -22,9 +24,25 @@ class ResultView extends StatelessWidget {
           fontWeight: FontWeight.bold,
         ),
       ),
-      body: const Column(
+      body: Column(
         children: [
-          CustomRowResultWidget(),
+          const CustomRowResultWidget(),
+          const SizedBox(
+            height: 80,
+          ),
+          CustomElevatedButtonWidget(
+            borderRadius: 0,
+            widthElevatedButton: 200,
+            heightElevatedButton: 50,
+            backgroundColor: const Color(
+              0xffFE9900,
+            ),
+            onPressed: () {},
+            text: 'Reset',
+            color: kBlackColor,
+            fontSize: 25,
+            fontWeight: FontWeight.bold,
+          ),
         ],
       ),
     );

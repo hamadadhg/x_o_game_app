@@ -6,12 +6,29 @@ class CustomRowResultWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
-      children: [
-        CustomColumnContainResultWidget(
-          text: 'Team X',
-        ),
-      ],
+    return const SizedBox(
+      height: 530,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          CustomColumnContainResultWidget(
+            text: 'Team X',
+          ),
+          SizedBox(
+            width: 20,
+          ),
+          VerticalDivider(
+            color: Colors.grey,
+            indent: 45,
+          ),
+          SizedBox(
+            width: 20,
+          ),
+          CustomColumnContainResultWidget(
+            text: 'Team O',
+          ),
+        ],
+      ),
     );
   }
 }
