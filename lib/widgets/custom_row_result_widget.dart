@@ -7,7 +7,7 @@ class CustomRowResultWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const SizedBox(
-      height: 530,
+      height: 490,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

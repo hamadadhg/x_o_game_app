@@ -3,12 +3,45 @@ import 'package:basket_ball/widgets/custom_elevated_button_widget.dart';
 import 'package:basket_ball/widgets/custom_text_widget.dart';
 import 'package:flutter/material.dart';
 
-class CustomColumnContainResultWidget extends StatelessWidget {
+class CustomColumnContainResultWidget extends StatefulWidget {
   const CustomColumnContainResultWidget({
     super.key,
     required this.text,
   });
   final String text;
+
+  @override
+  State<CustomColumnContainResultWidget> createState() =>
+      _CustomColumnContainResultWidgetState();
+}
+
+class _CustomColumnContainResultWidgetState
+    extends State<CustomColumnContainResultWidget> {
+  int score = 0;
+  void addOnePoint() {
+    setState(
+      () {
+        score++;
+      },
+    );
+  }
+
+  void addTwoPoint() {
+    setState(
+      () {
+        score = score + 2;
+      },
+    );
+  }
+
+  void addThreePoint() {
+    setState(
+      () {
+        score = score + 3;
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -17,13 +50,13 @@ class CustomColumnContainResultWidget extends StatelessWidget {
           height: 25,
         ),
         CustomTextWidget(
-          text: text,
-          fontSize: 45,
+          text: widget.text,
+          fontSize: 38,
           color: kBlackColor,
         ),
         CustomTextWidget(
-          text: '0',
-          fontSize: 180,
+          text: score.toString(),
+          fontSize: 150,
           color: kBlackColor,
         ),
         CustomElevatedButtonWidget(
@@ -33,7 +66,7 @@ class CustomColumnContainResultWidget extends StatelessWidget {
           backgroundColor: const Color(
             0xffFE9900,
           ),
-          onPressed: () {},
+          onPressed: addOnePoint,
           text: 'Add 1 Point',
           color: kBlackColor,
           fontSize: 18,
@@ -49,7 +82,7 @@ class CustomColumnContainResultWidget extends StatelessWidget {
           backgroundColor: const Color(
             0xffFE9900,
           ),
-          onPressed: () {},
+          onPressed: addTwoPoint,
           text: 'Add 2 Point',
           color: kBlackColor,
           fontSize: 18,
@@ -65,7 +98,7 @@ class CustomColumnContainResultWidget extends StatelessWidget {
           backgroundColor: const Color(
             0xffFE9900,
           ),
-          onPressed: () {},
+          onPressed: addThreePoint,
           text: 'Add 3 Point',
           color: kBlackColor,
           fontSize: 18,
