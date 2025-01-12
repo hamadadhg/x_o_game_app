@@ -1,61 +1,80 @@
+import 'package:basket_ball/cubits/result_cubit/result_cubit.dart';
+import 'package:basket_ball/cubits/result_cubit/result_state.dart';
 import 'package:basket_ball/widgets/custom_column_contain_result_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class CustomRowResultWidget extends StatelessWidget {
-  const CustomRowResultWidget({
-    super.key,
-    required this.scoreToTeamX,
-    required this.scoreToTeamO,
-    required this.addOnePointToTeamX,
-    required this.addTwoPointToTeamX,
-    required this.addThreePointToTeamX,
-    required this.addOnePointToTeamO,
-    required this.addTwoPointToTeamO,
-    required this.addThreePointToTeamO,
-  });
-  final int scoreToTeamX;
-  final int scoreToTeamO;
-  final VoidCallback addOnePointToTeamX;
-  final VoidCallback addTwoPointToTeamX;
-  final VoidCallback addThreePointToTeamX;
-  final VoidCallback addOnePointToTeamO;
-  final VoidCallback addTwoPointToTeamO;
-  final VoidCallback addThreePointToTeamO;
+  const CustomRowResultWidget({super.key});
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 490,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          CustomColumnContainResultWidget(
-            text: 'Team X',
-            score: scoreToTeamX,
-            addOnePoint: addOnePointToTeamX,
-            addTwoPoint: addTwoPointToTeamX,
-            addThreePoint: addThreePointToTeamX,
-            color: Colors.lightGreenAccent,
+    return BlocBuilder<ResultCubit, ResultState>(
+      builder: (context, state) {
+        return SizedBox(
+          height: 490,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              CustomColumnContainResultWidget(
+                text: 'Team X',
+                score: context.read<ResultCubit>().teamXPoints,
+                addOnePoint: () {
+                  BlocProvider.of<ResultCubit>(context).addPointsMethod(
+                    nameTeam: 'Team X',
+                    buttonNumber: 1,
+                  );
+                },
+                addTwoPoint: () {
+                  BlocProvider.of<ResultCubit>(context).addPointsMethod(
+                    nameTeam: 'Team X',
+                    buttonNumber: 2,
+                  );
+                },
+                addThreePoint: () {
+                  BlocProvider.of<ResultCubit>(context).addPointsMethod(
+                    nameTeam: 'Team X',
+                    buttonNumber: 3,
+                  );
+                },
+                color: Colors.lightGreenAccent,
+              ),
+              const SizedBox(
+                width: 20,
+              ),
+              const VerticalDivider(
+                color: Colors.grey,
+                indent: 45,
+              ),
+              const SizedBox(
+                width: 20,
+              ),
+              CustomColumnContainResultWidget(
+                text: 'Team O',
+                score: context.read<ResultCubit>().teamOPoints,
+                addOnePoint: () {
+                  BlocProvider.of<ResultCubit>(context).addPointsMethod(
+                    nameTeam: 'Team O',
+                    buttonNumber: 1,
+                  );
+                },
+                addTwoPoint: () {
+                  BlocProvider.of<ResultCubit>(context).addPointsMethod(
+                    nameTeam: 'Team O',
+                    buttonNumber: 2,
+                  );
+                },
+                addThreePoint: () {
+                  BlocProvider.of<ResultCubit>(context).addPointsMethod(
+                    nameTeam: 'Team O',
+                    buttonNumber: 3,
+                  );
+                },
+                color: Colors.lightBlueAccent,
+              ),
+            ],
           ),
-          const SizedBox(
-            width: 20,
-          ),
-          const VerticalDivider(
-            color: Colors.grey,
-            indent: 45,
-          ),
-          const SizedBox(
-            width: 20,
-          ),
-          CustomColumnContainResultWidget(
-            text: 'Team O',
-            score: scoreToTeamO,
-            addOnePoint: addOnePointToTeamO,
-            addTwoPoint: addTwoPointToTeamO,
-            addThreePoint: addThreePointToTeamO,
-            color: Colors.lightBlueAccent,
-          ),
-        ],
-      ),
+        );
+      },
     );
   }
 }
