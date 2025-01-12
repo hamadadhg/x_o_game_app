@@ -42,7 +42,12 @@ class _CustomXOGameWidgetState extends State<CustomXOGameWidget> {
                   itemCount: listOfXOrOValues.length,
                   itemBuilder: (context, index) {
                     return GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        BlocProvider.of<XOCubit>(context).xoMethod(
+                          context: context,
+                          element: listOfXOrOValues[index],
+                        );
+                      },
                       child: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(
