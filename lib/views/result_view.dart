@@ -1,3 +1,4 @@
+/*
 import 'package:basket_ball/constant.dart';
 import 'package:basket_ball/cubits/result_cubit/result_cubit.dart';
 import 'package:basket_ball/widgets/custom_reset_button_widget.dart';
@@ -39,3 +40,4 @@ class ResultView extends StatelessWidget {
     );
   }
 }
+*/

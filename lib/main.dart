@@ -1,3 +1,4 @@
+/*
 import 'package:basket_ball/views/home_view.dart';
 import 'package:basket_ball/views/result_view.dart';
 import 'package:basket_ball/views/x_o_view.dart';
@@ -23,3 +24,4 @@ class XOApp extends StatelessWidget {
     );
   }
 }
+*/

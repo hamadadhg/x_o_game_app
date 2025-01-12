@@ -1,3 +1,4 @@
+/*
 import 'package:basket_ball/cubits/result_cubit/result_cubit.dart';
 import 'package:basket_ball/cubits/result_cubit/result_state.dart';
 import 'package:basket_ball/widgets/custom_column_contain_result_widget.dart';
@@ -78,3 +79,4 @@ class CustomRowResultWidget extends StatelessWidget {
     );
   }
 }
+*/
