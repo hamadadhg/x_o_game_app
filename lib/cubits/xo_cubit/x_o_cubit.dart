@@ -10,8 +10,16 @@ class XOCubit extends Cubit<XOState> {
       : super(
           XOInitialState(),
         );
-  void xoMethod({required BuildContext context, required String? element}) {
-    if (element != null) {
+  List<String?> listOfXOrOValues = List.filled(
+    9,
+    null,
+  );
+  // this List should filled(fill in 9 elements and all elements the value of them is null)
+  void xoMethod({
+    required BuildContext context,
+    required int index,
+  }) {
+    if (listOfXOrOValues[index] != null) {
       emit(
         XONoAnotherSelectState(),
       );
@@ -40,7 +48,11 @@ class XOCubit extends Cubit<XOState> {
                     0xffFFE9E9,
                   ),
                   onPressed: () {
-                    element = 'X';
+                    listOfXOrOValues[index] = 'X';
+
+                    emit(
+                      XOSelectState(),
+                    );
                     Navigator.pop(
                       context,
                     );
@@ -57,7 +69,11 @@ class XOCubit extends Cubit<XOState> {
                     0xffE6F4FA,
                   ),
                   onPressed: () {
-                    element = 'O';
+                    listOfXOrOValues[index] = 'O';
+
+                    emit(
+                      XOSelectState(),
+                    );
                     Navigator.pop(
                       context,
                     );
@@ -71,9 +87,6 @@ class XOCubit extends Cubit<XOState> {
           ),
         );
       },
-    );
-    emit(
-      XOSelectState(),
     );
   }
 }
