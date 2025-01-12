@@ -1,4 +1,3 @@
-/*
 import 'package:basket_ball/constant.dart';
 import 'package:basket_ball/widgets/custom_start_game_widget.dart';
 import 'package:flutter/material.dart';
@@ -16,4 +15,3 @@ class HomeView extends StatelessWidget {
     );
   }
 }
-*/
