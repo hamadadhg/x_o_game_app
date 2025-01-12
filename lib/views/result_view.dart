@@ -99,7 +99,7 @@ class _ResultViewState extends State<ResultView> {
             addThreePointToTeamO: addThreePointToTeamO,
           ),
           const SizedBox(
-            height: 80,
+            height: 35,
           ),
           CustomElevatedButtonWidget(
             borderRadius: 0,
